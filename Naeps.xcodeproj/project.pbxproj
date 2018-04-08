@@ -25,7 +25,6 @@
 		2104F216207A6ACD00657D6D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		21C9C3C4207A25C6003517CD /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		21DDD67D207A7CBA00F57D71 /* Naeps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Naeps-Bridging-Header.h"; sourceTree = "<group>"; };
-		21DDD67E207A7CBB00F57D71 /* IBHeatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBHeatMap.h; sourceTree = "<group>"; };
 		21DDD67F207A7CBB00F57D71 /* IBMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMatrix.h; sourceTree = "<group>"; };
 		21DDD680207A7CBB00F57D71 /* IBMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMatrix.m; sourceTree = "<group>"; };
 		21DDD681207A7CBB00F57D71 /* IBHeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBHeatMap.m; sourceTree = "<group>"; };
@@ -88,7 +87,6 @@
 			children = (
 				21DDD688207AAA4D00F57D71 /* IBHeatMap.swift */,
 				21DDD68A207AAA7200F57D71 /* IBHeatMapDelegate.swift */,
-				21DDD67E207A7CBB00F57D71 /* IBHeatMap.h */,
 				21DDD681207A7CBB00F57D71 /* IBHeatMap.m */,
 				21DDD67F207A7CBB00F57D71 /* IBMatrix.h */,
 				21DDD680207A7CBB00F57D71 /* IBMatrix.m */,
