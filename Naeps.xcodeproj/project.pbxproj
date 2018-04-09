@@ -105,8 +105,8 @@
 		21DDD698207B948700F57D71 /* Result */ = {
 			isa = PBXGroup;
 			children = (
-				21E319CB207566280065A70D /* Result.storyboard */,
 				21E319C9207566280065A70D /* ResultViewController.swift */,
+				21E319CB207566280065A70D /* Result.storyboard */,
 			);
 			path = Result;
 			sourceTree = "<group>";

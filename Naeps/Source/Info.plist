@@ -39,5 +39,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Щоб обробити вибране зображення потрібно отримати доступ до галереї</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Щоб обробити зроблену фотографію потрібно отримати доступ до камери</string>
 </dict>
 </plist>

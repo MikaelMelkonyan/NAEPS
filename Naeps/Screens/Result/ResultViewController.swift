@@ -15,6 +15,8 @@ class ResultViewController: UIViewController {
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var imageHeight: NSLayoutConstraint!
     
+    var initialImage: UIImage!
+    
     private var heatMap: UIImageView!
     private var points: [CGPoint]?
     private var weights: [Int]?
@@ -87,7 +89,7 @@ class ResultViewController: UIViewController {
 
 extension ResultViewController {
     
-    func drawDots(on image: UIImage, for points: [CGPoint], width: CGFloat, height: CGFloat, yStart: CGFloat) -> UIImage? {
+    private func drawDots(on image: UIImage, for points: [CGPoint], width: CGFloat, height: CGFloat, yStart: CGFloat) -> UIImage? {
         let pixelsWidth = CGFloat(image.size.width)
         let pixelsHeight = CGFloat(image.size.height)
         UIGraphicsBeginImageContext(image.size)
@@ -108,7 +110,7 @@ extension ResultViewController {
         return resultImage
     }
     
-    func getWhitePoints(in image: UIImage, width: CGFloat, height: CGFloat, yStart: CGFloat) -> ([CGPoint], [Int]) {
+    private func getWhitePoints(in image: UIImage, width: CGFloat, height: CGFloat, yStart: CGFloat) -> ([CGPoint], [Int]) {
         let pixelsWidth = Int(image.size.width)
         let pixelsHeight = Int(image.size.height)
         
