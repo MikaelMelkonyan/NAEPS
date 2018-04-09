@@ -10,6 +10,10 @@
 		2104F217207A6ACD00657D6D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2104F216207A6ACD00657D6D /* UIColor.swift */; };
 		21C9C3C5207A25C6003517CD /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C9C3C4207A25C6003517CD /* Thread.swift */; };
 		21DDD68E207AD75A00F57D71 /* LFHeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DDD68D207AD75A00F57D71 /* LFHeatMap.m */; };
+		21DDD690207B803400F57D71 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DDD68F207B803400F57D71 /* UIView.swift */; };
+		21DDD692207B904D00F57D71 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DDD691207B904D00F57D71 /* UISegmentedControl.swift */; };
+		21DDD695207B942A00F57D71 /* PhotoSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DDD694207B942A00F57D71 /* PhotoSelectionViewController.swift */; };
+		21DDD697207B944400F57D71 /* PhotoSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DDD696207B944400F57D71 /* PhotoSelection.storyboard */; };
 		21E319C8207566280065A70D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E319C7207566280065A70D /* AppDelegate.swift */; };
 		21E319CA207566280065A70D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E319C9207566280065A70D /* ResultViewController.swift */; };
 		21E319CD207566280065A70D /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E319CB207566280065A70D /* Result.storyboard */; };
@@ -24,6 +28,10 @@
 		21DDD67D207A7CBA00F57D71 /* Naeps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Naeps-Bridging-Header.h"; sourceTree = "<group>"; };
 		21DDD68C207AD75A00F57D71 /* LFHeatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHeatMap.h; sourceTree = "<group>"; };
 		21DDD68D207AD75A00F57D71 /* LFHeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHeatMap.m; sourceTree = "<group>"; };
+		21DDD68F207B803400F57D71 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		21DDD691207B904D00F57D71 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
+		21DDD694207B942A00F57D71 /* PhotoSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectionViewController.swift; sourceTree = "<group>"; };
+		21DDD696207B944400F57D71 /* PhotoSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoSelection.storyboard; sourceTree = "<group>"; };
 		21E319C4207566280065A70D /* Naeps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Naeps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E319C7207566280065A70D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21E319C9207566280065A70D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +68,8 @@
 		21C9C3C7207A2640003517CD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				21E319CB207566280065A70D /* Result.storyboard */,
-				21E319C9207566280065A70D /* ResultViewController.swift */,
+				21DDD693207B93EB00F57D71 /* Photo Selection */,
+				21DDD698207B948700F57D71 /* Result */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -83,6 +91,24 @@
 				21DDD68D207AD75A00F57D71 /* LFHeatMap.m */,
 			);
 			path = LFHeatMap;
+			sourceTree = "<group>";
+		};
+		21DDD693207B93EB00F57D71 /* Photo Selection */ = {
+			isa = PBXGroup;
+			children = (
+				21DDD694207B942A00F57D71 /* PhotoSelectionViewController.swift */,
+				21DDD696207B944400F57D71 /* PhotoSelection.storyboard */,
+			);
+			path = "Photo Selection";
+			sourceTree = "<group>";
+		};
+		21DDD698207B948700F57D71 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				21E319CB207566280065A70D /* Result.storyboard */,
+				21E319C9207566280065A70D /* ResultViewController.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		21E319BB207566280065A70D = {
@@ -114,8 +140,10 @@
 		21E319D920756A2C0065A70D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				21DDD68F207B803400F57D71 /* UIView.swift */,
 				21E319DA20756A440065A70D /* UIImage.swift */,
 				2104F216207A6ACD00657D6D /* UIColor.swift */,
+				21DDD691207B904D00F57D71 /* UISegmentedControl.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -180,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21DDD697207B944400F57D71 /* PhotoSelection.storyboard in Resources */,
 				21E319D2207566280065A70D /* LaunchScreen.storyboard in Resources */,
 				21E319CF207566280065A70D /* Assets.xcassets in Resources */,
 				21E319CD207566280065A70D /* Result.storyboard in Resources */,
@@ -196,8 +225,11 @@
 				21E319DB20756A440065A70D /* UIImage.swift in Sources */,
 				21E319CA207566280065A70D /* ResultViewController.swift in Sources */,
 				21E319C8207566280065A70D /* AppDelegate.swift in Sources */,
+				21DDD690207B803400F57D71 /* UIView.swift in Sources */,
 				21C9C3C5207A25C6003517CD /* Thread.swift in Sources */,
 				21DDD68E207AD75A00F57D71 /* LFHeatMap.m in Sources */,
+				21DDD695207B942A00F57D71 /* PhotoSelectionViewController.swift in Sources */,
+				21DDD692207B904D00F57D71 /* UISegmentedControl.swift in Sources */,
 				2104F217207A6ACD00657D6D /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,6 @@ class ResultViewController: UIViewController {
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var imageHeight: NSLayoutConstraint!
     
-    
     private var heatMap: UIImageView!
     private var points: [CGPoint]?
     private var weights: [Int]?
@@ -24,11 +23,7 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        slider.value = 0.5
-        slider.isUserInteractionEnabled = false
-        segmentedControl.setTitle("Heat Map", forSegmentAt: 0)
-        segmentedControl.setTitle("Dots Map", forSegmentAt: 1)
-        segmentedControl.selectedSegmentIndex = 0
+        setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -144,9 +139,45 @@ extension ResultViewController {
 // MARK: Helpers
 extension ResultViewController {
     
+    private func setupView() {
+        title = "Результати обробки"
+        view.addGradient(colors: (UIColor(hex: 0x008975), UIColor(hex: 0x00BF9A)))
+        setupNavBar()
+        setupSlider()
+        setupSegmentedControl()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
+    private func setupNavBar() {
+        guard let navBar = navigationController?.navigationBar else { return }
+        navBar.tintColor = UIColor.white
+        navBar.barStyle = .black
+        navBar.setBackgroundImage(UIImage(), for: .default)
+        navBar.shadowImage = UIImage()
+        navBar.isTranslucent = true
+        navBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 17, weight: .medium)]
+    }
+    
     private func changeRatio(for image: UIImage) {
         let height = (image.size.height * processed.frame.width) / image.size.width
         imageHeight.constant = height
         view.layoutIfNeeded()
+    }
+    
+    private func setupSlider() {
+        slider.value = 0.5
+        slider.isUserInteractionEnabled = false
+    }
+    
+    private func setupSegmentedControl() {
+        let font = UIFont.systemFont(ofSize: 15, weight: .light)
+        segmentedControl.setTitleTextAttributes([NSAttributedStringKey.font: font], for: .normal)
+        segmentedControl.crop(radius: segmentedControl.frame.height / 2)
+        segmentedControl.removeBorders()
+        segmentedControl.setBorder(width: 1, color: UIColor.white)
+        
+        segmentedControl.setTitle("Heat Map", forSegmentAt: 0)
+        segmentedControl.setTitle("Dots Map", forSegmentAt: 1)
+        segmentedControl.selectedSegmentIndex = 0
     }
 }
