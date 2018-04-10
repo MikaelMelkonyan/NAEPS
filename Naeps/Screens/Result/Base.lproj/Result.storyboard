@@ -34,6 +34,34 @@
                                     <action selector="segmentDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="1LM-QQ-yhi"/>
                                 </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNH-Jx-jH7">
+                                <rect key="frame" x="150" y="125.5" width="74" height="20.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loader_white" translatesAutoresizingMaskIntoConstraints="NO" id="J6Y-yP-id4">
+                                        <rect key="frame" x="53" y="0.0" width="21" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="5zi-7d-XL3"/>
+                                            <constraint firstAttribute="width" constant="21" id="qbG-Zs-JRc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-gF-IpO">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="J6Y-yP-id4" secondAttribute="trailing" id="6vz-g2-rk3"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="280" id="9iv-BX-CY9"/>
+                                    <constraint firstAttribute="bottom" secondItem="ahm-gF-IpO" secondAttribute="bottom" id="H3E-4E-o9r"/>
+                                    <constraint firstItem="ahm-gF-IpO" firstAttribute="leading" secondItem="eNH-Jx-jH7" secondAttribute="leading" id="STW-qv-f3H"/>
+                                    <constraint firstItem="ahm-gF-IpO" firstAttribute="centerY" secondItem="J6Y-yP-id4" secondAttribute="centerY" id="hsL-By-AYy"/>
+                                    <constraint firstItem="J6Y-yP-id4" firstAttribute="leading" secondItem="ahm-gF-IpO" secondAttribute="trailing" constant="10" id="k8J-vD-Z2K"/>
+                                    <constraint firstItem="ahm-gF-IpO" firstAttribute="top" secondItem="eNH-Jx-jH7" secondAttribute="top" id="w5h-Rt-CR9"/>
+                                </constraints>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kIi-9l-Gfg">
                                 <rect key="frame" x="0.0" y="156" width="375" height="375"/>
                                 <constraints>
@@ -42,30 +70,35 @@
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="P1d-Su-EBD">
                                 <rect key="frame" x="18" y="597" width="339" height="31"/>
+                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="sliderValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="KG3-J1-rF2"/>
                                 </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P1d-Su-EBD" secondAttribute="bottom" constant="40" id="9iZ-BV-RF6"/>
                             <constraint firstItem="Ivs-j1-ely" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="BTD-5E-4do"/>
                             <constraint firstItem="P1d-Su-EBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CBw-go-Fu2"/>
                             <constraint firstItem="Ivs-j1-ely" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NN2-ee-D32"/>
                             <constraint firstItem="kIi-9l-Gfg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Z6h-u0-88a"/>
+                            <constraint firstItem="kIi-9l-Gfg" firstAttribute="top" secondItem="eNH-Jx-jH7" secondAttribute="bottom" constant="10" id="dWw-tL-ZrY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kIi-9l-Gfg" secondAttribute="trailing" id="eCU-F5-olq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P1d-Su-EBD" secondAttribute="trailing" constant="20" id="mAh-wR-4Tp"/>
                             <constraint firstItem="kIi-9l-Gfg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qDC-Ef-0tt"/>
+                            <constraint firstItem="eNH-Jx-jH7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wNh-V1-w2B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="uEZ-fd-doe"/>
                     <connections>
                         <outlet property="imageHeight" destination="GoJ-Ey-UkK" id="XIf-NZ-1jX"/>
+                        <outlet property="loaderImage" destination="J6Y-yP-id4" id="HOZ-F0-2hg"/>
                         <outlet property="processed" destination="kIi-9l-Gfg" id="3a0-GU-xNy"/>
                         <outlet property="segmentedControl" destination="Ivs-j1-ely" id="UVi-BQ-wMt"/>
                         <outlet property="slider" destination="P1d-Su-EBD" id="LXM-Gw-887"/>
+                        <outlet property="status" destination="ahm-gF-IpO" id="ndx-vq-KOW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,4 +106,7 @@
             <point key="canvasLocation" x="372" y="32.833583208395808"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loader_white" width="42" height="42"/>
+    </resources>
 </document>

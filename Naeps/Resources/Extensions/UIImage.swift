@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GPUImage
 
 extension UIImage {
     
@@ -20,6 +21,17 @@ extension UIImage {
     
     var grayscale: UIImage? {
         return applying(saturation: 0)
+    }
+    
+    func applying(threshold value: CGFloat) -> UIImage? {
+        let imageSource = GPUImagePicture(image: self)
+        let stillImageFilter = GPUImageAdaptiveThresholdFilter()
+        stillImageFilter.blurRadiusInPixels = value
+        imageSource?.addTarget(stillImageFilter)
+        imageSource?.processImage()
+        stillImageFilter.useNextFrameForImageCapture()
+        let image = stillImageFilter.imageFromCurrentFramebuffer()
+        return image
     }
 }
 
